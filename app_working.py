@@ -12,13 +12,15 @@ from flask import Flask, jsonify
 #################################################
 # Database Setup
 #################################################
+
+# Create Engine
 engine = create_engine("sqlite:///Resources/hawaii.sqlite")
 
-# reflect an existing database into a new model
+# Reflect an existing database into a new model
 Base = automap_base()
 
-# reflect the tables
-Base.prepare(engine, reflect=True)
+# Reflect the tables
+Base.prepare(engine, reflect = True)
 
 # Save references to each table
 Measurement = Base.classes.measurement
@@ -27,12 +29,16 @@ Station = Base.classes.station
 #################################################
 # Flask Setup
 #################################################
+
+# Create an app, being sure to pass __name__
 app = Flask(__name__)
 
 
 #################################################
 # Flask Routes
 #################################################
+
+# Define index route
 
 @app.route("/")
 def index():
@@ -42,10 +48,13 @@ def index():
         f"Precipitation: /api/v1.0/precipitation<br/>" 
         f"Stations: /api/v1.0/stations<br/>" 
         f"Temperature: /api/v1.0/tobs<br/>" 
-        f"Enter Start Date: /api/v1.0/[start_date format:yyyy-mm-dd]<br/>" 
+        f"Enter Start Date: /api/v1.0/yyyy-mm-dd<br/>" 
+        f"Enter Start Date & End Date: /api/v1.0/yyyy-mm-dd/yyyy-mm-dd<br/>" 
     )
 
 #####################################################
+
+# Define precipitation route
 
 @app.route('/api/v1.0/precipitation')
 def precipitation():
@@ -66,6 +75,8 @@ def precipitation():
     return jsonify(precipitation)
 
 #####################################################
+
+# Define stations route
 
 @app.route('/api/v1.0/stations')
 def stations():
@@ -90,13 +101,15 @@ def stations():
 
 #####################################################
 
+# Define tobs route
+
 @app.route('/api/v1.0/tobs')
 def temperature():
     session = Session(engine)
     sel = [Measurement.date,Measurement.tobs]
 
     active_stations = session.query(Measurement.station,func.count(Measurement.id)).\
-    group_by(Measurement.station).order_by(func.count(Measurement.id).desc()).all()
+        group_by(Measurement.station).order_by(func.count(Measurement.id).desc()).all()
 
     most_active_station_name = active_stations[0][0]
 
@@ -115,13 +128,14 @@ def temperature():
 
 #####################################################
 
+# Define user entered start date route
+
 @app.route('/api/v1.0/<start_date>')
 def entered_start(start_date):
     session = Session(engine)
     sel = [func.min(Measurement.tobs), func.max(Measurement.tobs), func.avg(Measurement.tobs)]
     
-    #queryresult = session.query(*sel).filter(Measurement.date >= start_date).all()
-    queryresult = session.query(*sel).filter(Measurement.date >= "2017-01-01").all()
+    queryresult = session.query(*sel).filter(Measurement.date >= start_date).all()
     
     session.close()
 
@@ -135,6 +149,31 @@ def entered_start(start_date):
 
     return jsonify(results)
 
+#####################################################
+
+# Define user entered start date & end date route
+
+@app.route('/api/v1.0/<start_date>/<end_date>')
+def entered_start_end(start_date, end_date):
+    session = Session(engine)
+    sel = [func.min(Measurement.tobs), func.max(Measurement.tobs), func.avg(Measurement.tobs)]
+    
+    queryresult = session.query(*sel).filter(Measurement.date >= start_date)\
+        .filter(Measurement.date <= end_date).all()
+    
+    session.close()
+
+    results = []
+    for min, max, avg in queryresult:
+        start_end_date_dict = {}
+        start_end_date_dict["Minimum"] = min
+        start_end_date_dict["Maximum"] = max
+        start_end_date_dict["Average"] = avg      
+        results.append(start_end_date_dict)
+
+    return jsonify(results)
+
+#####################################################
 
 
 if __name__ == '__main__':
