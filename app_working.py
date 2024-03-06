@@ -34,6 +34,7 @@ Station = Base.classes.station
 # Figure out one year back date from end of data in the hawaii.sqlite DB
 ########################################################################
 
+# Create session
 session = Session(engine)
 
 # Find the last date in the DB
