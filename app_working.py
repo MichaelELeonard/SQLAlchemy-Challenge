@@ -27,10 +27,10 @@ Measurement = Base.classes.measurement
 Station = Base.classes.station
 
 
+
 ########################################################################
 # Figure out one year back date from end of data in the hawaii.sqlite DB
 ########################################################################
-
 
 session = Session(engine)
 recent_measurement_date = session.query(Measurement.date).order_by(Measurement.date.desc()).first()
@@ -46,12 +46,26 @@ one_year_before_measurement_date = dt.date(last_measurement_date.year - 1, last_
 
 
 
+#########################################################
+# Find the most active station name from hawaii.sqlite DB
+#########################################################
+
+# Sort the stations with the most active on top
+active_stations = session.query(Measurement.station,func.count(Measurement.id)).\
+        group_by(Measurement.station).order_by(func.count(Measurement.id).desc()).all()
+
+#Pull the most active station name
+most_active_station_name = active_stations[0][0]
+
+
+
 #################################################
 # Flask Setup
 #################################################
 
 # Create an app, being sure to pass __name__
 app = Flask(__name__)
+
 
 
 #################################################
@@ -71,6 +85,8 @@ def index():
         f"Enter Start Date: /api/v1.0/yyyy-mm-dd<br/>" 
         f"Enter Start Date & End Date: /api/v1.0/yyyy-mm-dd/yyyy-mm-dd<br/>" 
     )
+
+
 
 #####################################################
 
@@ -93,6 +109,8 @@ def precipitation():
         precipitation.append(prcp_dict)
 
     return jsonify(precipitation)
+
+
 
 #####################################################
 
@@ -119,6 +137,8 @@ def stations():
 
     return jsonify(the_stations)
 
+
+
 #####################################################
 
 # Define tobs route
@@ -127,11 +147,6 @@ def stations():
 def temperature():
     session = Session(engine)
     sel = [Measurement.date,Measurement.tobs]
-
-    active_stations = session.query(Measurement.station,func.count(Measurement.id)).\
-        group_by(Measurement.station).order_by(func.count(Measurement.id).desc()).all()
-
-    most_active_station_name = active_stations[0][0]
 
     most_active_station = session.query(*sel).filter(Measurement.station == most_active_station_name)\
         .filter(Measurement.date >= one_year_before_measurement_date).order_by(Measurement.date).all()
@@ -146,6 +161,8 @@ def temperature():
         temperature.append(temp_dict)
 
     return jsonify(temperature)
+
+
 
 #####################################################
 
@@ -169,6 +186,8 @@ def entered_start(start_date):
         results.append(start_date_dict)
 
     return jsonify(results)
+
+
 
 #####################################################
 
@@ -194,8 +213,9 @@ def entered_start_end(start_date, end_date):
 
     return jsonify(results)
 
-#####################################################
 
+
+#####################################################
 
 if __name__ == '__main__':
     app.run(debug=True)
