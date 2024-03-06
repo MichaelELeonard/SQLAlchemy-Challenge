@@ -35,6 +35,8 @@ Station = Base.classes.station
 ########################################################################
 
 session = Session(engine)
+
+# Find the last date in the DB
 recent_measurement_date = session.query(Measurement.date).order_by(Measurement.date.desc()).first()
 
 # Separate year/month/date info
