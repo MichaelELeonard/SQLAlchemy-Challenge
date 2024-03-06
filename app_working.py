@@ -26,6 +26,26 @@ Base.prepare(engine, reflect = True)
 Measurement = Base.classes.measurement
 Station = Base.classes.station
 
+
+########################################################################
+# Figure out one year back date from end of data in the hawaii.sqlite DB
+########################################################################
+
+
+session = Session(engine)
+recent_measurement_date = session.query(Measurement.date).order_by(Measurement.date.desc()).first()
+
+# Separate year/month/date info
+last_measurement_date = dt.datetime.strptime(recent_measurement_date[0], '%Y-%m-%d') # Concept from https://community.esri.com/t5/python-questions/python-complains-about-date-format/td-p/494167
+
+# Set most recent measurement date in data set (reassemble)
+recent_measurement_date = dt.date(last_measurement_date.year, last_measurement_date.month, last_measurement_date.day)
+
+# Calculate the date one year earlier from most recent measurement date (reassemble)
+one_year_before_measurement_date = dt.date(last_measurement_date.year - 1, last_measurement_date.month, last_measurement_date.day)
+
+
+
 #################################################
 # Flask Setup
 #################################################
@@ -61,7 +81,7 @@ def precipitation():
     session = Session(engine)
     sel = [Measurement.date,Measurement.prcp]
     
-    queryresult = session.query(*sel).all()
+    queryresult = session.query(*sel).filter(Measurement.date >= one_year_before_measurement_date).all()
     
     session.close()
 
@@ -113,7 +133,8 @@ def temperature():
 
     most_active_station_name = active_stations[0][0]
 
-    most_active_station = session.query(*sel).filter(Measurement.station == most_active_station_name).all()
+    most_active_station = session.query(*sel).filter(Measurement.station == most_active_station_name)\
+        .filter(Measurement.date >= one_year_before_measurement_date).order_by(Measurement.date).all()
     
     session.close()
 
