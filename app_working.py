@@ -153,13 +153,13 @@ def temperature():
     session = Session(engine)
     sel = [Measurement.date,Measurement.tobs]
 
-    most_active_station = session.query(*sel).filter(Measurement.station == most_active_station_name)\
+    active_station = session.query(*sel).filter(Measurement.station == most_active_station_name)\
         .filter(Measurement.date >= one_year_before_measurement_date).order_by(Measurement.date).all()
     
     session.close()
 
     temperature = []
-    for date, tobs in most_active_station:
+    for date, tobs in active_station:
         temp_dict = {}
         temp_dict["Date"] = date
         temp_dict["Temperature"] = tobs
