@@ -17,7 +17,7 @@ For the precipitation analysis, I was tasked to examine the last 12 months of da
 
 In this section of the analysis the nine weather analysis stations and their corresponding data were queried and sorted by activity, with the most active station as first in the list and least active station in the last entry.  The name of the most active station was stored in the variable most_active_station_name and the min, max and average temperature was queried for the most active station.  A histogram was then created from the final year data for the most active station, with the temperature on the x-axis and the frequence on the y-axis. 
 
-## PART 2: DESIGN YOUR CLIMATE APP
+# PART 2: DESIGN YOUR CLIMATE APP
 
 For the second portion of the SQLAlchemy Challenge an interactive climate app was created using Python and Flask.  An engine was established and mapped to the hawaii.sqlite database.  The database was reflected using automap_base() and references to the station and measurement tables were established.  The variable one_year_before_measurement_date was acquired, and the most active station was established in the same manner as in the first portion of the analysis.  An app was then created through flask and Flask(__name__) was passed.  An API Index was set up to display all the available API routes for the end user to utilize.  These routes included: 
 
