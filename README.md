@@ -2,6 +2,7 @@ For Week 10 SQLAlchemy Challenge we were tasked with conducting a climate analys
 * PART 1: ANALYZE AND EXPLORE THE CLIMATE DATA
 * PART 2: DESIGN YOUR CLIMATE APP
 
+<br>
 
 #PART 1: ANALYZE AND EXPLORE THE CLIMATE DATA
 
