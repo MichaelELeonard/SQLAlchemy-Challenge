@@ -4,7 +4,7 @@ For Week 10 SQLAlchemy Challenge we were tasked with conducting a climate analys
 
 <br>
 
-#PART 1: ANALYZE AND EXPLORE THE CLIMATE DATA
+# PART 1: ANALYZE AND EXPLORE THE CLIMATE DATA
 
 ##THE SETUP
 
