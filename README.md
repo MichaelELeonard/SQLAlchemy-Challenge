@@ -25,7 +25,7 @@ For the second portion of the SQLAlchemy Challenge an interactive climate app wa
 
 ## PRECIPITATION 
 
-For the precipitation static API route, the measurement date and precipitation amount for the last year of data was collected for the database.  This information was then stored in the variable queryresult with was the read into a list for dictionaries and displayed through the browser using the return jsonify(precipitation) function.  The output data included:
+For the precipitation static API route, the measurement date and precipitation amount for the last year of data was collected for the database.  This information was then stored in the variable query result with was read into a list for dictionaries and displayed through the browser using the return jsonify(precipitation) function.  The output data included:
 
 * Date
 * Precipitation
