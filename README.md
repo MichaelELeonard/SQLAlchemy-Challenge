@@ -5,6 +5,8 @@ Climate Data code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob
 
 Climate App code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/app_working.py
 
+<br>
+
 For Week 10 SQLAlchemy Challenge we were tasked with conducting a climate analysis.  The data for the analysis was gathered from nine weather out post stations Honolulu Hawaii and contains data gathered from 2010 to 2017.  The components of this two-part analysis included:
 * PART 1: ANALYZE AND EXPLORE THE CLIMATE DATA
 * PART 2: DESIGN YOUR CLIMATE APP
