@@ -6,8 +6,8 @@
 
 ## GOAL
 For the SQLAlchemy/Flask Challenge we were tasked with conducting a climate analysis.  The data for the analysis was gathered from nine weather out post stations Honolulu Hawaii and contains data gathered from 2010 to 2017.  The components of this two-part analysis included:
-* PART 1: ANALYZE AND EXPLORE THE CLIMATE DATA
-* PART 2: DESIGN YOUR CLIMATE APP
+* PART 1: ANALYZE AND EXPLORE THE CLIMATE DATA (SQLAlchemy)
+* PART 2: DESIGN YOUR CLIMATE APP (Flask)
 
 
 ## PART 1: ANALYZE AND EXPLORE THE CLIMATE DATA
