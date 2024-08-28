@@ -1,6 +1,6 @@
 <img src="Pics/Header.png" width="727" height="294">
 
-# SQLAlchemy Challenge
+# SQLAlchemy/Flask Challenge
 
 
 
