@@ -1,9 +1,7 @@
 <img src="Pics/Header.png" width="727" height="294">
 
 # SQLAlchemy Challenge
-Climate Data code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/climate_working.ipynb
 
-Climate App code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/app_working.py
 
 
 ## GOAL
@@ -13,6 +11,7 @@ For the SQLAlchemy Challenge we were tasked with conducting a climate analysis. 
 
 
 ## PART 1: ANALYZE AND EXPLORE THE CLIMATE DATA
+Climate Data code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/climate_working.ipynb
 
 ### THE SETUP
 
@@ -40,6 +39,7 @@ In this section we analyzed the nine most active weather stations.  A histogram 
 <img src="Pics/Flask Header.png" width="555" height="202">
 
 ## PART 2: DESIGN YOUR CLIMATE APP
+Climate App code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/app_working.py
 
 For the second portion of the SQLAlchemy Challenge an interactive climate app was created using Python and Flask.  An engine was established and mapped to the hawaii.sqlite database.  The database was reflected using automap_base() and references to the station and measurement tables were established.  The variable one_year_before_measurement_date was acquired, and the most active station was established in the same manner as in the first portion of the analysis.  An app was then created through flask and Flask(__name__) was passed.  An API Index was set up to display all the available API routes for the end user to utilize.
 
