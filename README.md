@@ -20,11 +20,21 @@ Python and SQLAlchemy were utilized to conduct this component of the analysis.  
 
 ### PRECIPITATION ANALYSIS
 
-For the precipitation analysis, I was tasked to examine the last 12 months of data in the hawaii.sqlite datsabase.  The first step in the analysis was to identify the most recent data point in the database.  This was achieved by sorting the hawaii.sqlite by measurement date and sorting it in descending order and then taking the first entry in the query which contained the most recent date.  This information was stored in the variable recent_measurement_date and parsed into its individual components, Year, Month and Date.  Two dates were then created and from these parced date components recent_measurement_date and one_year_before_measurement_date.  These two date variables were utilized in the rest of the analysis for quaries.  The last year of precipitation data was then extracted from the hawaii.sqlite database and read into a pandas dataframe.  A line graph was created with the x-axis comprised of dates and the y-axis displaying precipitation levels in inches.  Finally summary statistics were extracted from the data using prcp_results_pd.describe()
+For the precipitation analysis, we were tasked to examine the last 12 months of data in the hawaii.sqlite datsabase.  The first step in the analysis was to identify the most recent data point in the database.  This was achieved by sorting the hawaii.sqlite by measurement date and sorting it in descending order and then taking the first entry in the query which contained the most recent date.  This information was parsed into its individual components, Year, Month and Date.  Two dates were then created and from these parced date components recent_measurement_date and one_year_before_measurement_date.  These two date variables were utilized in the rest of the analysis for quaries.  The last year of precipitation data was then extracted from the hawaii.sqlite database and read into a pandas dataframe.  A line graph was created with the x-axis comprised of dates and the y-axis displaying precipitation levels in inches.  Finally summary statistics were extracted from the data.
+
+<img src="Pics/Precipitation data.png" width="517" height="467">
+
+<img src="Pics/Precipitation summary statistics.png" width="151" height="224">
+
 
 ### EXPLORATORY STATION ANALYSIS
 
-In this section of the analysis the nine weather analysis stations and their corresponding data were queried and sorted by activity, with the most active station as first in the list and least active station in the last entry.  The name of the most active station was stored in the variable most_active_station_name and the min, max and average temperature was queried for the most active station.  A histogram was then created from the final year data for the most active station, with the temperature on the x-axis and the frequence on the y-axis. 
+In this section we analyzed the nine most active weather stations.  A histogram was then created from the final year data for the most active station, with the temperature on the x-axis and the frequence on the y-axis. 
+
+<img src="Pics/Most active stations.png" width="190" height="189">
+
+<img src="Pics/Most active station temp.png" width="527" height="383">
+
 
 ## PART 2: DESIGN YOUR CLIMATE APP
 
