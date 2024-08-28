@@ -40,10 +40,15 @@ In this section we analyzed the nine most active weather stations.  A histogram 
 
 For the second portion of the SQLAlchemy Challenge an interactive climate app was created using Python and Flask.  An engine was established and mapped to the hawaii.sqlite database.  The database was reflected using automap_base() and references to the station and measurement tables were established.  The variable one_year_before_measurement_date was acquired, and the most active station was established in the same manner as in the first portion of the analysis.  An app was then created through flask and Flask(__name__) was passed.  An API Index was set up to display all the available API routes for the end user to utilize.
 
+<img src="Pics/Routes.png" width="443" height="128">
+
 ### PRECIPITATION 
 For the precipitation static API route, the measurement date and precipitation amount for the last year of data was collected for the database.  This information was then stored in the variable query result with was read into a list for dictionaries and displayed through the browser using the return jsonify(precipitation) function.  The output data included:
 * Date
 * Precipitation
+
+<img src="Pics/Precipitation.png" width="220" height="328">
+
 
 ### STATIONS
 For the precipitation static API route all the data specific to each station was queried from the database and returned through the browser utilizing the return jsonify(the_stations) function.  The station specific data included:
@@ -53,14 +58,22 @@ For the precipitation static API route all the data specific to each station was
 * Longitude
 * Elevation
 
+<img src="Pics/Stations.png" width="408" height="556">
+
 ### TEMPERATURE  
 For the temperature static API route, the last year of temperature for the most active station was acquired and stored in the variable active_station using our previously established variables most_active_station_name and one_year_before_measurement_date in the query.  The data was then read into a list of dictionaries and displayed through the browser using the return jsonify(temperature) function.  The output data included:
 * Date
 * Temperature
+
+<img src="Pics/Tobs.png" width="215" height="331">
 
 ### START DATE & START DATE & END DATE
 For the Start Date/Start & End Date dynamic API routes the end user will manually enter the Start/Start and End dates to identify the date range to be examined.   These specific input dates will be utilized to query the database and calculate the min, max and avg temperatures of the requested range.  Both API routes function identically with the only differences being if the end user inputs one or two dates and a slight difference in the query structure to accommodate for the second input.  The output fields for the Start Date/Start & End Date dynamic API routes include:
 * Minimum
 * Maximum
 * Average
+
+<img src="Pics/Enter date.png" width="446" height="232">
+
+<img src="Pics/Enter range.png" width="529" height="228">
 
