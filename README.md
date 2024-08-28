@@ -35,6 +35,9 @@ In this section we analyzed the nine most active weather stations.  A histogram 
 <img src="Pics/Most active station temp.png" width="527" height="383">
 
 <br>
+<br>
+
+
 
 <img src="Pics/Flask Header.png" width="555" height="202">
 
