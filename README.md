@@ -36,6 +36,9 @@ In this section we analyzed the nine most active weather stations.  A histogram 
 <img src="Pics/Most active station temp.png" width="527" height="383">
 
 
+
+<img src="Pics/Flask Header.png" width="555" height="202">
+
 ## PART 2: DESIGN YOUR CLIMATE APP
 
 For the second portion of the SQLAlchemy Challenge an interactive climate app was created using Python and Flask.  An engine was established and mapped to the hawaii.sqlite database.  The database was reflected using automap_base() and references to the station and measurement tables were established.  The variable one_year_before_measurement_date was acquired, and the most active station was established in the same manner as in the first portion of the analysis.  An app was then created through flask and Flask(__name__) was passed.  An API Index was set up to display all the available API routes for the end user to utilize.
