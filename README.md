@@ -52,11 +52,11 @@ For the precipitation static API route, the measurement date and precipitation a
 
 ### STATIONS
 For the precipitation static API route all the data specific to each station was queried from the database and returned through the browser utilizing the return jsonify(the_stations) function.  The station specific data included:
-* Station
-* Name
+* Elevation
 * Latitude
 * Longitude
-* Elevation
+* Name
+* Station
 
 <img src="Pics/Stations.png" width="408" height="556">
 
@@ -69,9 +69,9 @@ For the temperature static API route, the last year of temperature for the most 
 
 ### START DATE & START DATE & END DATE
 For the Start Date/Start & End Date dynamic API routes the end user will manually enter the Start/Start and End dates to identify the date range to be examined.   These specific input dates will be utilized to query the database and calculate the min, max and avg temperatures of the requested range.  Both API routes function identically with the only differences being if the end user inputs one or two dates and a slight difference in the query structure to accommodate for the second input.  The output fields for the Start Date/Start & End Date dynamic API routes include:
+* Average
 * Minimum
 * Maximum
-* Average
 
 <img src="Pics/Enter date.png" width="446" height="232">
 
