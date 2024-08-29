@@ -79,6 +79,7 @@ For the Start Date and Start & End Date dynamic API routes the end user will man
 * Minimum
 * Maximum
 
+<br>
 Date manually entered 2010-09-18
 
 <img src="Pics/Enter date.png" width="446" height="232">
