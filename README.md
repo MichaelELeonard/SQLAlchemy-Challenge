@@ -71,7 +71,7 @@ For the temperature static API route, the last year of temperature for the most 
 * Date
 * Temperature
 
-<img src="Pics/Tobs.png" width="215" height="331">
+<img src="Pics/Tobs.png" width="210" height="328">
 
 ### START DATE & START DATE & END DATE
 For the Start Date and Start & End Date dynamic API routes the end user will manually enter the Start or Start and End dates to establish the date range to be examined.   These input dates will be utilized to query the database and calculate the min, max and avg temperatures of the requested range.  Both API routes function identically with the only differences being if the end user inputs one or two dates and a slight difference in the query structure to accommodate for the second input.  The output fields for the Start Date/Start & End Date dynamic API routes include:
