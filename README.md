@@ -77,6 +77,8 @@ For the Start Date and Start & End Date dynamic API routes the end user will man
 * Minimum
 * Maximum
 
+<br>
+
 ### Start Date
 
 Date manually entered 2010-09-18
