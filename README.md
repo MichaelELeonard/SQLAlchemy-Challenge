@@ -49,7 +49,7 @@ For the second portion of the SQLAlchemy Challenge an interactive climate app wa
 <img src="Pics/Routes.png" width="443" height="128">
 
 ### PRECIPITATION 
-For the precipitation static API route, the measurement date and precipitation amount for the last year of data was collected for the database.  This information was then stored in the variable query result and was read into a list for dictionaries and displayed.  The output data included:
+For the precipitation static API route, the measurement date and precipitation amount for the last year of data was collected for the database.  The output data included:
 * Date
 * Precipitation
 
