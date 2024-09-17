@@ -13,7 +13,7 @@ For the SQLAlchemy/Flask Challenge we were tasked with conducting a climate anal
 # Part 1: Analyze and Explore the Climate Data
 Climate Data code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/climate_working.ipynb
 
-### Precipitation Analysis
+## Precipitation Analysis
 
 For the precipitation analysis, we were tasked to examine the last 12 months of data in the hawaii.sqlite datsabase.  The last year of precipitation data was identified and extracted from the hawaii.sqlite database and read into a pandas dataframe.  A line graph outlining precipitation levels and summary statistics were used to analyze the data.
 
@@ -26,7 +26,7 @@ For the precipitation analysis, we were tasked to examine the last 12 months of 
 <br>
 
 
-### Exploratory Station Analysis
+## Exploratory Station Analysis
 
 In the exploratory station analysis, we analyzed the nine most active weather stations.  A histogram was then created from the final year data for the most active weather station, with temperature on the x-axis and frequency on the y-axis. 
 
