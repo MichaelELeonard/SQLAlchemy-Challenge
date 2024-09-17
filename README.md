@@ -10,7 +10,7 @@ For the SQLAlchemy/Flask Challenge we were tasked with conducting a climate anal
 * PART 2: DESIGN YOUR CLIMATE APP (Flask)
 
 
-## PART 1: ANALYZE AND EXPLORE THE CLIMATE DATA
+# PART 1: ANALYZE AND EXPLORE THE CLIMATE DATA
 Climate Data code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/climate_working.ipynb
 
 ### PRECIPITATION ANALYSIS
@@ -41,7 +41,7 @@ In the exploratory station analysis, we analyzed the nine most active weather st
 
 <img src="Pics/Flask Header.png" width="555" height="202">
 
-## PART 2: DESIGN YOUR CLIMATE APP
+# PART 2: DESIGN YOUR CLIMATE APP
 Climate App code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/app_working.py
 
 For the second portion of the SQLAlchemy Challenge an interactive climate app was created using Python and Flask.  An API Index was established to display all the available API routes for the end user to utilize.
