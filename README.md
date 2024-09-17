@@ -13,13 +13,9 @@ For the SQLAlchemy/Flask Challenge we were tasked with conducting a climate anal
 ## PART 1: ANALYZE AND EXPLORE THE CLIMATE DATA
 Climate Data code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/climate_working.ipynb
 
-### THE SETUP
-
-Python and SQLAlchemy were utilized to conduct this component of the analysis.  A Jupyter Source Code file climate_working was used to assess a SQLITE File hawaii.sqlite which contained the data.  The needed dependencies were imported and SQLAlchemy was used to map the code to the existing database using the create_engine() and automap_base() functions.  Finally, two references were established to the class tables in the database named station and measurement and a SQLAlchemy session was established.   
-
 ### PRECIPITATION ANALYSIS
 
-For the precipitation analysis, we were tasked to examine the last 12 months of data in the hawaii.sqlite datsabase.  The first step in the analysis was to identify the most recent data point in the database.  This was achieved by sorting the hawaii.sqlite by measurement date and sorting it in descending order and then taking the first entry in the query which contained the most recent date.  This information was parsed into its individual components, Year, Month and Date.  Two dates were then created and from these parced date components recent_measurement_date and one_year_before_measurement_date.  These two date variables were utilized in the rest of the analysis for quaries.  The last year of precipitation data was then extracted from the hawaii.sqlite database and read into a pandas dataframe.  A line graph was created with the x-axis comprised of dates and the y-axis displaying precipitation levels in inches.  Finally summary statistics were extracted from the data.
+For the precipitation analysis, we were tasked to examine the last 12 months of data in the hawaii.sqlite datsabase.  The last year of precipitation data was identified and extracted from the hawaii.sqlite database and read into a pandas dataframe.  A line graph and summary statistics were extracted from the data.
 
 <img src="Pics/Precipitation data.png" width="517" height="467">
 
