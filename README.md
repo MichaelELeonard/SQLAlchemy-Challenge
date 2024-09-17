@@ -81,12 +81,12 @@ For the Start Date and Start & End Date dynamic API routes the end user will man
 
 ### Start Date
 
-Date manually entered 2010-09-18
+Manually entered date: 2010-09-18
 
 <img src="Pics/Enter date.png" width="446" height="232">
 
 ### Start Date & End Date
 
-Date manually entered 2010-09-18 to 2010-09-24
+Manually entered date range: 2010-09-18 to 2010-09-24
 
 <img src="Pics/Enter range.png" width="529" height="228">
