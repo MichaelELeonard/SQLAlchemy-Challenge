@@ -44,7 +44,7 @@ In the exploratory station analysis, we analyzed the nine most active weather st
 ## PART 2: DESIGN YOUR CLIMATE APP
 Climate App code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/app_working.py
 
-For the second portion of the SQLAlchemy Challenge an interactive climate app was created using Python and Flask.  An engine was established and mapped to the hawaii.sqlite database.  The database was reflected using automap_base() and references to the station and measurement tables were established.  API Index was established to display all the available API routes for the end user to utilize.
+For the second portion of the SQLAlchemy Challenge an interactive climate app was created using Python and Flask.  An API Index was established to display all the available API routes for the end user to utilize.
 
 <img src="Pics/Routes.png" width="443" height="128">
 
