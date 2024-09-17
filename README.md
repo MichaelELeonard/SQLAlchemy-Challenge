@@ -28,7 +28,7 @@ For the precipitation analysis, we were tasked to examine the last 12 months of 
 
 ### EXPLORATORY STATION ANALYSIS
 
-In the exploratory station analysis, we analyzed the nine most active weather stations.  A histogram was then created from the final year data for the most active station, with temperature on the x-axis and the frequency on the y-axis. 
+In the exploratory station analysis, we analyzed the nine most active weather stations.  A histogram was then created from the final year data for the most active station, with temperature on the x-axis and frequency on the y-axis. 
 
 <img src="Pics/Most active stations.png" width="190" height="189">
 
