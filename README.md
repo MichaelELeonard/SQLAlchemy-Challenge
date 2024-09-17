@@ -17,6 +17,8 @@ Climate Data code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob
 
 For the precipitation analysis, we were tasked to examine the last 12 months of data in the hawaii.sqlite datsabase.  The last year of precipitation data was identified and extracted from the hawaii.sqlite database and read into a pandas dataframe.  A line graph and summary statistics were used to analyze the data.
 
+<br>
+
 <img src="Pics/Precipitation data.png" width="517" height="467">
 
 <img src="Pics/Precipitation summary statistics.png" width="151" height="224">
