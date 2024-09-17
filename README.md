@@ -48,7 +48,7 @@ For the second portion of the SQLAlchemy Challenge an interactive climate app wa
 
 <img src="Pics/Routes.png" width="443" height="128">
 
-### PRECIPITATION 
+## PRECIPITATION 
 For the precipitation static API route, the measurement date and precipitation amount for the last year of data was collected for the database.  The output data included:
 * Date
 * Precipitation
@@ -56,7 +56,7 @@ For the precipitation static API route, the measurement date and precipitation a
 <img src="Pics/Precipitation.png" width="220" height="328">
 
 
-### STATIONS
+## STATIONS
 For the precipitation static API route all the data specific to each station was queried from the database.  The station specific data included:
 * Elevation
 * Latitude
@@ -66,7 +66,7 @@ For the precipitation static API route all the data specific to each station was
 
 <img src="Pics/Stations.png" width="408" height="556">
 
-### TEMPERATURE  
+## TEMPERATURE  
 For the temperature static API route, the last year of temperature for the most active station was queried.  The output data included:
 * Date
 * Temperature
@@ -87,7 +87,7 @@ Date manually entered 2010-09-18
 
 <img src="Pics/Enter date.png" width="446" height="232">
 
-### START DATE & END DATE
+## START DATE & END DATE
 
 Date manually entered 2010-09-18 to 2010-09-24
 
