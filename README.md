@@ -46,7 +46,7 @@ Climate App code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/
 
 For the second portion of the SQLAlchemy Challenge an interactive climate app was created using Python and Flask.  An API Index was established to display all the available API routes for the end user to utilize.
 
-<img src="Pics/Routes.png" width="487" height="140">
+<img src="Pics/Routes.png" width="443" height="128">
 
 ### PRECIPITATION 
 For the precipitation static API route, the measurement date and precipitation amount for the last year of data was collected for the database.  The output data included:
