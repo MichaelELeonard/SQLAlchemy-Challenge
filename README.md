@@ -23,8 +23,6 @@ For the precipitation analysis, we were tasked to examine the last 12 months of 
 
 <img src="Pics/Precipitation summary statistics.png" width="151" height="224">
 
-<br>
-
 
 ## Exploratory Station Analysis
 
