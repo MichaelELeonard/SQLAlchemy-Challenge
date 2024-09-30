@@ -67,7 +67,7 @@ For the precipitation static API route all the data specific to each station was
 <img src="Pics/Stations.png" width="408" height="556">
 
 ## Temperature  
-For the temperature static API route, the last year of temperature for the most active station was queried.  The output data included:
+For the temperature static API route, the last year of temperatures for the most active station was queried.  The output data included:
 * Date
 * Temperature
 
