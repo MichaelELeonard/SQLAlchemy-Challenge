@@ -6,12 +6,13 @@
 
 ## Goal
 For the SQLAlchemy/Flask Challenge we were tasked with conducting a climate analysis.  The data for the analysis was gathered from nine weather out post stations Honolulu Hawaii and contains data gathered from 2010 to 2017.  The components of this two-part analysis included:
-* PART 1: ANALYZE AND EXPLORE THE CLIMATE DATA (SQLAlchemy)
-* PART 2: DESIGN YOUR CLIMATE APP (Flask)
+* PART 1: Analyze and Explore the Climate Data (SQLAlchemy)
+* PART 2: Design a Climate App (Flask)
 
 
 # Part 1: Analyze and Explore the Climate Data
-Climate Data code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/climate_working.ipynb
+
+[Climate Data Code Link]( https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/climate_working.ipynb)
 
 ## Precipitation Analysis
 
@@ -40,7 +41,8 @@ In the exploratory station analysis, we analyzed the nine most active weather st
 <img src="Pics/Flask Header.png" width="555" height="202">
 
 # Part 2: Design a Climate App
-Climate App code - https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/app_working.py
+
+[Climate App Code Link]( https://github.com/MichaelELeonard/sqlalchemy-challenge/blob/main/app_working.py)
 
 For the second portion of the SQLAlchemy Challenge an interactive climate app was created using Python and Flask.  An API Index was established to display all the available API routes for the end user to utilize.
 
